@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/textView_langChanger_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/options_language_label"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.331" />
+
+    <TextView
+        android:id="@+id/textView_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/options_language"
+        android:onClick="changeLang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_langChanger_label"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.331" />
+
+    <TextView
+        android:id="@+id/textView_stepChanger_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/options_step_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_langChanger_label"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="81dp"
+        android:layout_height="126dp"
+        android:layout_marginBottom="153dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_stepChanger_label"
+        app:layout_constraintTop_toBottomOf="@+id/textView_language">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_step1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_num1" />
+
+            <Button
+                android:id="@+id/button_step2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_num2" />
+
+            <Button
+                android:id="@+id/button_step3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_num3" />
+
+            <Button
+                android:id="@+id/button_step4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_num4" />
+
+            <Button
+                android:id="@+id/button_step5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_num5" />
+
+            <Button
+                android:id="@+id/button_step6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/step_num6" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_saveSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/saveSettings"
+        android:onClick="saveSettings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.719" />
+
+</android.support.constraint.ConstraintLayout>

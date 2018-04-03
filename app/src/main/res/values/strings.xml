@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CaesarsCipher</string>
+    <string name="main_menu_label">Добро пожаловать!</string>
+    <string name="main_menu_description">В этом приложении вы можете зашифровать/расшифровать текст с помощью Шифра Цезаря с настраиваемым сдвигом. Классический сдвиг - 3</string>
+    <string name="encoding_text">Зашифровать</string>
+    <string name="decoding_text">Расшифровать</string>
+    <string name="options_label">Настройки</string>
+    <string name="options_language_label">Язык текста: </string>
+    <string name="options_step_label">Шаг шифрования:</string>
+    <string name="options_step">3</string>
+    <string name="options_language">RU</string>
+    <string name="button_decode">Расшифровать\nРаботает Неправильно</string>
+    <string name="button_encode">Зашифровать</string>
+    <string name="input_text">Введите ваш текст</string>
+    <string name="output_text">Здесь будет выведен ваш шифр</string>
+    <string name="step_num1">1</string>
+    <string name="step_num2">2</string>
+    <string name="step_num3">3</string>
+    <string name="step_num4">4</string>
+    <string name="step_num5">5</string>
+    <string name="step_num6">6</string>
+    <string name="saveSettings">Сохранить изменения</string>
+</resources>
