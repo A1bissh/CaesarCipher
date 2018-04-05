@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".EncodeActivity" />
         <activity android:name=".DecodeActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".MainActivityCopy"></activity>
     </application>
 
 </manifest>

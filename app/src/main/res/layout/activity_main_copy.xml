@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_label"
+            android:layout_width="242dp"
+            android:layout_height="64dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="25dp"
+            android:text="@string/main_menu_label"
+            android:textColor="@color/colorTextMainMenu"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/textView_description"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:padding="5dp"
+            android:text="@string/main_menu_description"
+            android:textColor="@color/colorTextMainMenu" />
+
+        <TextView
+            android:id="@+id/textView_encode"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/colorPrimaryDark"
+            android:paddingStart="65dp"
+            android:paddingEnd="40dp"
+            android:paddingTop="45dp"
+            android:text="@string/encoding_text"
+            android:textColor="@color/colorTextMainMenu"
+            android:textStyle="bold"
+            android:onClick="goToEncode"/>
+
+        <TextView
+            android:id="@+id/textView_decode"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:paddingStart="62dp"
+            android:paddingEnd="40dp"
+            android:paddingTop="38dp"
+            android:text="@string/decoding_text"
+            android:onClick="goToDecode"
+            android:textColor="@color/colorTextMainMenu"
+            android:textStyle="bold" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="changeOptions">
+
+            <TextView
+                android:id="@+id/textView_optionsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/options_label"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.094" />
+
+            <TextView
+                android:id="@+id/textView_options_language_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/options_language_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.215"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_optionsLabel"
+                app:layout_constraintVertical_bias="0.108" />
+
+            <TextView
+                android:id="@+id/textView_options_step_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/options_step_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.288"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_options_language_label"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView_optionsLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/options_language"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView_options_language_label"
+                app:layout_constraintTop_toBottomOf="@+id/textView_optionsLabel"
+                app:layout_constraintVertical_bias="0.108" />
+
+            <TextView
+                android:id="@+id/textView_optionsStep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/options_step"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView_options_step_label"
+                app:layout_constraintTop_toBottomOf="@+id/textView_optionsLanguage"
+                app:layout_constraintVertical_bias="0.0" />
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="153dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView_caesar"
+            android:layout_width="175dp"
+            android:layout_height="267dp"
+            android:src="@drawable/caesar" />
+
+        <ImageView
+            android:id="@+id/imageView_code"
+            android:layout_width="match_parent"
+            android:layout_height="269dp"
+            android:src="@drawable/code_screen" />
+
+    </LinearLayout>
+</LinearLayout>

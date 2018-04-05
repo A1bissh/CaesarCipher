@@ -5,7 +5,7 @@ class CaesarCipher {
     val engAlph = "abcdefghijklmnopqrstuvwxyz"; val rusAlph = "абвгдеёжзийклмнопрстуфкцчшщъыьэюя"
 
 
-
+    val space:Char = ' '
 
 
 
@@ -13,7 +13,7 @@ class CaesarCipher {
         var encodedString = ""
 
         for (i in startString.indices) when{
-            (startString[i].equals(" ")) -> encodedString += " "
+            (startString[i] == space) -> encodedString += " "
             (engAlph.indexOf(startString.toLowerCase()[i])==-1) -> encodedString += ""
             else -> encodedString += engAlph[ (engAlph.indexOf(startString.toLowerCase()[i])+step) % engAlph.length ]
         }
@@ -27,7 +27,7 @@ class CaesarCipher {
         var encodedString = ""
 
         for (i in startString.indices) when{
-            (startString[i].equals(" ")) -> encodedString += " "
+            (startString[i] == space) -> encodedString += " "
             (rusAlph.indexOf(startString.toLowerCase()[i])==-1) -> encodedString += ""
             else -> encodedString += rusAlph[ (rusAlph.indexOf(startString.toLowerCase()[i])+step) % rusAlph.length ]
         }
@@ -41,7 +41,7 @@ class CaesarCipher {
         var decodedString = ""
 
         for (i in startString.indices) when{
-            (startString[i].equals(" ")) -> decodedString += " "
+            (startString[i] == space) -> decodedString += " "
             (engAlph.indexOf(startString.toLowerCase()[i])==-1) -> decodedString += ""
             else -> decodedString += engAlph[ (engAlph.indexOf(startString.toLowerCase()[i])+(engAlph.length - step) ) % engAlph.length ]
         }
@@ -55,7 +55,7 @@ class CaesarCipher {
         var decodedString = ""
 
         for (i in startString.indices) when{
-            (startString[i].equals(" ")) -> decodedString += " "
+            (startString[i] == space) -> decodedString += " "
             (rusAlph.indexOf(startString.toLowerCase()[i])==-1) -> decodedString += ""
             else -> decodedString += rusAlph[ ( rusAlph.indexOf(startString.toLowerCase()[i])+(rusAlph.length - step) ) % rusAlph.length ]
         }

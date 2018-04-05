@@ -16,8 +16,8 @@ class EncodeActivity : AppCompatActivity() {
         optionsStep = exploreSettingsStep()
     }
 
-    fun exploreSettingsStep() = intent.getIntExtra("step", 3)
-    fun exploreSettingsLang() = intent.getStringExtra("language")
+    private fun exploreSettingsStep() = intent.getIntExtra("step", 3)
+    private fun exploreSettingsLang() = intent.getStringExtra("language")
 
     fun goEncode(view: View){
         val text = editText_input.text.toString()
