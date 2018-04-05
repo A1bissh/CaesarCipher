@@ -9,15 +9,9 @@
     <string name="options_step_label">Шаг шифрования:</string>
     <string name="options_step">3</string>
     <string name="options_language">RU</string>
-    <string name="button_decode">Расшифровать\nРаботает Неправильно</string>
+    <string name="button_decode">Расшифровать</string>
     <string name="button_encode">Зашифровать</string>
     <string name="input_text">Введите ваш текст</string>
     <string name="output_text">Здесь будет выведен ваш шифр</string>
-    <string name="step_num1">1</string>
-    <string name="step_num2">2</string>
-    <string name="step_num3">3</string>
-    <string name="step_num4">4</string>
-    <string name="step_num5">5</string>
-    <string name="step_num6">6</string>
     <string name="saveSettings">Сохранить изменения</string>
 </resources>
