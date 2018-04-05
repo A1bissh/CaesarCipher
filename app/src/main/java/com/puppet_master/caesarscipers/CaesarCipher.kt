@@ -11,8 +11,11 @@ class CaesarCipher {
 
     fun encodeEng(startString:String, step:Int) : String{
         var encodedString = ""
-        for (i in startString.indices){
-            encodedString += engAlph[ (engAlph.indexOf(startString.toLowerCase()[i])+step)% engAlph.length ]
+
+        for (i in startString.indices) when{
+            (startString[i].equals(" ")) -> encodedString += " "
+            (engAlph.indexOf(startString.toLowerCase()[i])==-1) -> encodedString += ""
+            else -> encodedString += engAlph[ (engAlph.indexOf(startString.toLowerCase()[i])+step) % engAlph.length ]
         }
 
         return encodedString
@@ -22,9 +25,13 @@ class CaesarCipher {
 
     fun encodeRu(startString:String, step:Int) : String{
         var encodedString = ""
-        for (i in startString.indices){
-            encodedString += rusAlph[ (rusAlph.indexOf(startString.toLowerCase()[i])+step)% rusAlph.length ]
+
+        for (i in startString.indices) when{
+            (startString[i].equals(" ")) -> encodedString += " "
+            (rusAlph.indexOf(startString.toLowerCase()[i])==-1) -> encodedString += ""
+            else -> encodedString += rusAlph[ (rusAlph.indexOf(startString.toLowerCase()[i])+step) % rusAlph.length ]
         }
+
         return encodedString
     }
 
@@ -33,9 +40,12 @@ class CaesarCipher {
     fun decodeEng(startString: String, step:Int) : String{
         var decodedString = ""
 
-        for (i in startString.indices){
-            decodedString += engAlph[ (engAlph.indexOf(startString.toLowerCase()[i])+(engAlph.length-step))% engAlph.length ]
+        for (i in startString.indices) when{
+            (startString[i].equals(" ")) -> decodedString += " "
+            (engAlph.indexOf(startString.toLowerCase()[i])==-1) -> decodedString += ""
+            else -> decodedString += engAlph[ (engAlph.indexOf(startString.toLowerCase()[i])+(engAlph.length - step) ) % engAlph.length ]
         }
+
         return decodedString;
     }
 
@@ -44,8 +54,10 @@ class CaesarCipher {
     fun decodeRu(startString: String, step:Int) : String{
         var decodedString = ""
 
-        for (i in startString.indices){
-            decodedString += rusAlph[ (rusAlph.indexOf(startString.toLowerCase()[i])+(engAlph.length-step))% rusAlph.length ]
+        for (i in startString.indices) when{
+            (startString[i].equals(" ")) -> decodedString += " "
+            (rusAlph.indexOf(startString.toLowerCase()[i])==-1) -> decodedString += ""
+            else -> decodedString += rusAlph[ ( rusAlph.indexOf(startString.toLowerCase()[i])+(rusAlph.length - step) ) % rusAlph.length ]
         }
 
         return decodedString;
