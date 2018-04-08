@@ -16,14 +16,14 @@ class DecodeActivity : AppCompatActivity() {
         optionsStep = exploreSettingsStep()
     }
 
-    fun exploreSettingsStep() = intent.getIntExtra("step", 3)
+    fun exploreSettingsStep() = intent.getStringExtra("step")
     fun exploreSettingsLang() = intent.getStringExtra("language")
 
-    fun goDecode(view: View){
+    fun goDecode(view: View) {
         val text = editText_input.text.toString()
         var encoder = CaesarCipher()
 
-        when(optionsLang){
+        when(optionsLang) {
             "RU" -> textView_output.text = encoder.decodeRu(text, optionsStep.toInt())
             "ENG" -> textView_output.text = encoder.decodeEng(text, optionsStep.toInt())
         }

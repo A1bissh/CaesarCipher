@@ -16,7 +16,7 @@ class EncodeActivity : AppCompatActivity() {
         optionsStep = exploreSettingsStep()
     }
 
-    private fun exploreSettingsStep() = intent.getIntExtra("step", 3)
+    private fun exploreSettingsStep() = intent.getStringExtra("step")
     private fun exploreSettingsLang() = intent.getStringExtra("language")
 
     fun goEncode(view: View){
